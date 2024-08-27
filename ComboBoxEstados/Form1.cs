@@ -13,7 +13,6 @@ namespace ComboBoxEstados
 {
     public partial class Form1 : Form
     {
-        String sp;
 
         public Form1()
         {
@@ -57,21 +56,98 @@ namespace ComboBoxEstados
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboTodos.Text == "SP" || comboTodos.Text == "RJ" || comboTodos.Text == "MG" || comboTodos.Text == "ES")
             {
-                // Defina o nome específico do item que você deseja mover
-                string nomeItemEspecifico = "NomeDoItem"; // Altere para o nome específico do item
-
-                // Encontrar o índice do item específico na comboBox1
-                int index = comboBox1.Items.IndexOf(nomeItemEspecifico);
-
-                // Verificar se o item foi encontrado
-                if (index != -1)
-                {
-                    // Adicionar o item à comboBox2
-                    comboBox2.Items.Add(comboBox1.Items[index]);
-                    // Remover o item da comboBox1
-                    comboBox1.Items.RemoveAt(index);
-                }
+                cboSudeste.Items.Add(comboTodos.Text);
+                comboTodos.Items.RemoveAt(comboTodos.SelectedIndex);
+                lblALL.Text = comboTodos.Items.Count.ToString();
+                lblSUD.Text = cboSudeste.Items.Count.ToString();
+                cboSudeste.Sorted = true;
             }
+
+            if (comboTodos.Text == "PR" || comboTodos.Text == "RS" || comboTodos.Text == "SC")
+            {
+                cboSul.Items.Add(comboTodos.Text);
+                comboTodos.Items.RemoveAt(comboTodos.SelectedIndex);
+                lblALL.Text = comboTodos.Items.Count.ToString();
+                lblSUL.Text = cboSudeste.Items.Count.ToString();
+                cboSudeste.Sorted = true;
+            }
+
+            if (comboTodos.Text == "MT" || comboTodos.Text == "GO" || comboTodos.Text == "MS")
+            {
+                cboCO.Items.Add(comboTodos.Text);
+                comboTodos.Items.RemoveAt(comboTodos.SelectedIndex);
+                lblALL.Text = comboTodos.Items.Count.ToString();
+                lblCO.Text = cboCO.Items.Count.ToString();
+                cboCO.Sorted = true;
+            }
+
+            if (comboTodos.Text == "AC" || comboTodos.Text == "RO" || comboTodos.Text == "AM" || comboTodos.Text == "AP" || comboTodos.Text == "PA" || comboTodos.Text == "RR" || comboTodos.Text == "TO")
+            {
+                cboNorte.Items.Add(comboTodos.Text);
+                comboTodos.Items.RemoveAt(comboTodos.SelectedIndex);
+                lblALL.Text = comboTodos.Items.Count.ToString();
+                lblNORTE.Text = cboNorte.Items.Count.ToString();
+                cboNorte.Sorted = true;
+            }
+
+            if (comboTodos.Text == "BA" || comboTodos.Text == "PI" || comboTodos.Text == "MA" || comboTodos.Text == "CE" || comboTodos.Text == "SE" || comboTodos.Text == "PE" || comboTodos.Text == "AL" || comboTodos.Text == "PB" || comboTodos.Text == "RN")
+            {
+                cboNordeste.Items.Add(comboTodos.Text);
+                comboTodos.Items.RemoveAt(comboTodos.SelectedIndex);
+                lblALL.Text = comboTodos.Items.Count.ToString();
+                lblNORD.Text = cboNordeste.Items.Count.ToString();
+                cboNordeste.Sorted = true;
+            }
+        }
+  
+
+
+
+        private void cboSudeste_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSudeste_Click(object sender, EventArgs e)
+        {
+            comboTodos.Items.Add(cboSudeste.Text);
+            cboSudeste.Items.RemoveAt(cboSudeste.SelectedIndex);
+            lblALL.Text = cboSudeste.Items.Count.ToString();
+            lblSUD.Text = cboSudeste.Items.Count.ToString();
+            cboSudeste.Sorted = true;
+            cboSudeste.ResetText();
+        }
+
+        private void cboSul_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCO_Click(object sender, EventArgs e)
+        {
+            comboTodos.Items.Add(cboCO.Text);
+            cboCO.Items.RemoveAt(cboCO.SelectedIndex);
+            lblALL.Text = cboCO.Items.Count.ToString();
+            lblCO.Text = cboCO.Items.Count.ToString();
+            cboCO.Sorted = true;
+            cboCO.ResetText();
+        }
+
+        private void cboCO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboNorte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboNordeste_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }

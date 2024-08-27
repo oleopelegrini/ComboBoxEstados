@@ -35,15 +35,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboTodos = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cboNordeste = new System.Windows.Forms.ComboBox();
+            this.cboCO = new System.Windows.Forms.ComboBox();
+            this.cboSudeste = new System.Windows.Forms.ComboBox();
+            this.cboNorte = new System.Windows.Forms.ComboBox();
+            this.cboSul = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSudeste = new System.Windows.Forms.Button();
+            this.buttonCO = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.lblALL = new System.Windows.Forms.Label();
@@ -150,45 +150,50 @@
             this.comboTodos.TabIndex = 1;
             this.comboTodos.SelectedIndexChanged += new System.EventHandler(this.comboTodos_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cboNordeste
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(315, 191);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(198, 21);
-            this.comboBox2.TabIndex = 2;
+            this.cboNordeste.FormattingEnabled = true;
+            this.cboNordeste.Location = new System.Drawing.Point(315, 191);
+            this.cboNordeste.Name = "cboNordeste";
+            this.cboNordeste.Size = new System.Drawing.Size(198, 21);
+            this.cboNordeste.TabIndex = 2;
+            this.cboNordeste.SelectedIndexChanged += new System.EventHandler(this.cboNordeste_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cboCO
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(315, 242);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 21);
-            this.comboBox3.TabIndex = 3;
+            this.cboCO.FormattingEnabled = true;
+            this.cboCO.Location = new System.Drawing.Point(315, 242);
+            this.cboCO.Name = "cboCO";
+            this.cboCO.Size = new System.Drawing.Size(198, 21);
+            this.cboCO.TabIndex = 3;
+            this.cboCO.SelectedIndexChanged += new System.EventHandler(this.cboCO_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cboSudeste
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(315, 293);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(198, 21);
-            this.comboBox4.TabIndex = 4;
+            this.cboSudeste.FormattingEnabled = true;
+            this.cboSudeste.Location = new System.Drawing.Point(315, 293);
+            this.cboSudeste.Name = "cboSudeste";
+            this.cboSudeste.Size = new System.Drawing.Size(198, 21);
+            this.cboSudeste.TabIndex = 4;
+            this.cboSudeste.SelectedIndexChanged += new System.EventHandler(this.cboSudeste_SelectedIndexChanged);
             // 
-            // comboBox5
+            // cboNorte
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(315, 140);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(198, 21);
-            this.comboBox5.TabIndex = 5;
+            this.cboNorte.FormattingEnabled = true;
+            this.cboNorte.Location = new System.Drawing.Point(315, 140);
+            this.cboNorte.Name = "cboNorte";
+            this.cboNorte.Size = new System.Drawing.Size(198, 21);
+            this.cboNorte.TabIndex = 5;
+            this.cboNorte.SelectedIndexChanged += new System.EventHandler(this.cboNorte_SelectedIndexChanged);
             // 
-            // comboBox6
+            // cboSul
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(315, 345);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(198, 21);
-            this.comboBox6.TabIndex = 6;
+            this.cboSul.FormattingEnabled = true;
+            this.cboSul.Location = new System.Drawing.Point(315, 345);
+            this.cboSul.Name = "cboSul";
+            this.cboSul.Size = new System.Drawing.Size(198, 21);
+            this.cboSul.TabIndex = 6;
+            this.cboSul.SelectedIndexChanged += new System.EventHandler(this.cboSul_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -211,25 +216,27 @@
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSudeste
             // 
-            this.button3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(530, 282);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 38);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSudeste.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSudeste.Location = new System.Drawing.Point(530, 279);
+            this.btnSudeste.Name = "btnSudeste";
+            this.btnSudeste.Size = new System.Drawing.Size(43, 38);
+            this.btnSudeste.TabIndex = 9;
+            this.btnSudeste.Text = "-";
+            this.btnSudeste.UseVisualStyleBackColor = true;
+            this.btnSudeste.Click += new System.EventHandler(this.btnSudeste_Click);
             // 
-            // button4
+            // buttonCO
             // 
-            this.button4.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(530, 228);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 38);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonCO.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCO.Location = new System.Drawing.Point(530, 228);
+            this.buttonCO.Name = "buttonCO";
+            this.buttonCO.Size = new System.Drawing.Size(43, 38);
+            this.buttonCO.TabIndex = 10;
+            this.buttonCO.Text = "-";
+            this.buttonCO.UseVisualStyleBackColor = true;
+            this.buttonCO.Click += new System.EventHandler(this.buttonCO_Click);
             // 
             // button5
             // 
@@ -330,15 +337,15 @@
             this.Controls.Add(this.lblALL);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonCO);
+            this.Controls.Add(this.btnSudeste);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboSul);
+            this.Controls.Add(this.cboNorte);
+            this.Controls.Add(this.cboSudeste);
+            this.Controls.Add(this.cboCO);
+            this.Controls.Add(this.cboNordeste);
             this.Controls.Add(this.comboTodos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -362,15 +369,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboTodos;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cboNordeste;
+        private System.Windows.Forms.ComboBox cboCO;
+        private System.Windows.Forms.ComboBox cboSudeste;
+        private System.Windows.Forms.ComboBox cboNorte;
+        private System.Windows.Forms.ComboBox cboSul;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSudeste;
+        private System.Windows.Forms.Button buttonCO;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lblALL;
