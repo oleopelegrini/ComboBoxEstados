@@ -41,11 +41,11 @@
             this.cboNorte = new System.Windows.Forms.ComboBox();
             this.cboSul = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSUL = new System.Windows.Forms.Button();
             this.btnSudeste = new System.Windows.Forms.Button();
             this.buttonCO = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnNORD = new System.Windows.Forms.Button();
+            this.btnNORTE = new System.Windows.Forms.Button();
             this.lblALL = new System.Windows.Forms.Label();
             this.lblSUL = new System.Windows.Forms.Label();
             this.lblSUD = new System.Windows.Forms.Label();
@@ -206,15 +206,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnSUL
             // 
-            this.button2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(530, 334);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSUL.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSUL.Location = new System.Drawing.Point(530, 334);
+            this.btnSUL.Name = "btnSUL";
+            this.btnSUL.Size = new System.Drawing.Size(43, 38);
+            this.btnSUL.TabIndex = 8;
+            this.btnSUL.Text = "-";
+            this.btnSUL.UseVisualStyleBackColor = true;
+            this.btnSUL.Click += new System.EventHandler(this.btnSUL_Click);
             // 
             // btnSudeste
             // 
@@ -238,25 +239,27 @@
             this.buttonCO.UseVisualStyleBackColor = true;
             this.buttonCO.Click += new System.EventHandler(this.buttonCO_Click);
             // 
-            // button5
+            // btnNORD
             // 
-            this.button5.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(530, 180);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(43, 38);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnNORD.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNORD.Location = new System.Drawing.Point(530, 180);
+            this.btnNORD.Name = "btnNORD";
+            this.btnNORD.Size = new System.Drawing.Size(43, 38);
+            this.btnNORD.TabIndex = 11;
+            this.btnNORD.Text = "-";
+            this.btnNORD.UseVisualStyleBackColor = true;
+            this.btnNORD.Click += new System.EventHandler(this.btnNORD_Click);
             // 
-            // button6
+            // btnNORTE
             // 
-            this.button6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(530, 129);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 38);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnNORTE.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNORTE.Location = new System.Drawing.Point(530, 129);
+            this.btnNORTE.Name = "btnNORTE";
+            this.btnNORTE.Size = new System.Drawing.Size(43, 38);
+            this.btnNORTE.TabIndex = 12;
+            this.btnNORTE.Text = "-";
+            this.btnNORTE.UseVisualStyleBackColor = true;
+            this.btnNORTE.Click += new System.EventHandler(this.btnNORTE_Click);
             // 
             // lblALL
             // 
@@ -335,11 +338,11 @@
             this.Controls.Add(this.lblSUD);
             this.Controls.Add(this.lblSUL);
             this.Controls.Add(this.lblALL);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnNORTE);
+            this.Controls.Add(this.btnNORD);
             this.Controls.Add(this.buttonCO);
             this.Controls.Add(this.btnSudeste);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSUL);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cboSul);
             this.Controls.Add(this.cboNorte);
@@ -375,11 +378,11 @@
         private System.Windows.Forms.ComboBox cboNorte;
         private System.Windows.Forms.ComboBox cboSul;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSUL;
         private System.Windows.Forms.Button btnSudeste;
         private System.Windows.Forms.Button buttonCO;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnNORD;
+        private System.Windows.Forms.Button btnNORTE;
         private System.Windows.Forms.Label lblALL;
         private System.Windows.Forms.Label lblSUL;
         private System.Windows.Forms.Label lblSUD;
